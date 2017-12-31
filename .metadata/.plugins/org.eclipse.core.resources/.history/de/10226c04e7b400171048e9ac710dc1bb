@@ -1,0 +1,155 @@
+package Q2;
+
+import gurobi.*;
+
+public class SmallBucketCLSPOptimizer {
+	
+	public SmallBucketCLSPSolution optimze ( int T, int nProducts, double c, double[] h, double[] s, double[] I0, double[][] demand, double[] ts, double[] tp ) {
+		// pre	: 0 < nProducts, #profitPerProduct = nProducts
+		// ret	: solution object with optimal value of LP shown in lecture
+		
+		assert ( 0 < nProducts );
+		
+		
+		SmallBucketCLSPSolution result = new SmallBucketCLSPSolution ( nProducts, T );
+		
+		try { 
+			
+			// 1. create environment, model and set name ------------------------------------------------------------------------
+			
+			GRBEnv env = new GRBEnv ( );
+			env.set ( GRB.IntParam.OutputFlag, 0 );
+			
+			GRBModel model = new GRBModel ( env );
+			model.set ( GRB.StringAttr.ModelName, "Hello-Linear-Programming" );
+			
+			
+			// 2. define decision variables -------------------------------------------------------------------------------------
+			
+			GRBVar[][] q = new GRBVar [nProducts ][T]; // q=number of items produced in time period T
+			GRBVar[][] y = new GRBVar [nProducts][T]; // TODO implement,boolean, whether product k is produced in time period t
+			GRBVar[][] z = new GRBVar[nProducts][T]; // TODO implement,boolean, indicates if we start producing k at time period t
+			
+			GRBVar[][] I = new GRBVar[nProducts][T]; // TODO implement, inventory of product k
+			
+			for ( int k = 0; k < nProducts; k++ ) {
+				for ( int t = 0; t < T; t++ ) {
+					  I
+				    y
+				    q
+				    z[k][t]=model.addVar(0.0, 1.0, 0.0, GRB.BINARY , "Product" + Integer.toString(nProducts)+"at time period"+ Integer.toString(t));// TODO implement
+				} // for
+			} // for
+			
+			model.update();
+		   	    
+			
+			// 3. add constraints -----------------------------------------------------------------------------------------------
+			
+			// inventory balance equations
+			
+			for (int k = 0; k < nProducts; k++) {
+				
+				for (int t = 0; t < T; t++) {
+					
+					GRBLinExpr leftHandSide = new GRBLinExpr ( );
+					GRBLinExpr rightHandSide = new GRBLinExpr();
+					
+					leftHandSide.addTerm ( 1.0, I [ k ] [ t ] );
+					
+					if  ( t == 0 ) {
+						rightHandSide.addConstant ( I0 [ k ] );
+					}
+					
+					if ( t > 0 ) {
+						rightHandSide.addTerm ( 1.0, I [ k ] [ t - 1 ] );
+					}
+					rightHandSide.addTerm ( 1.0, q [ k ] [ t ] );
+					rightHandSide.addConstant ( -1.0 * demand [ k ] [ t ] );
+						
+					model.addConstr ( leftHandSide, GRB.EQUAL, rightHandSide, "constraint-inventory-balance-" + ( k + 1 ) + "-" + ( t + 1 ) );
+					
+				} // for
+				
+			} // for
+			
+			
+			GRBLinExpr lhs = new GRBLinExpr();
+			
+			for (int k = 0; k < nProducts; k++) {
+	        
+	        for (int t = 0; t < T; t++) {
+			
+			
+			lhs.addTerm(1.0, y[k][t]);
+			
+	        }
+	        }
+			
+			model.addConstr ( lhs, GRB.LESS_EQUAL, 1.0, "production boolean" );
+			// one product per time period
+			// TODO implement Constraint 16 of Problem 2.1
+			
+			// setup decision / capacity constraint			
+			// TODO implement Constraint 17 of Problem 2.1
+	
+			// setup carry-over over			
+			// TODO implement Constraint 18 of Problem 2.1
+						
+			// setup or carry-over			
+			// TODO implement Constraint 18 of Problem 2.1		
+			
+		
+			// 4. define objective function
+			
+			
+		    // TODO implement objective function
+		    
+		    
+		    // 5. optimize ------------------------------------------------------------------------------------------------------
+		    
+		    model.optimize();
+		    
+		    if ( model.get ( GRB.IntAttr.Status ) == GRB.Status.OPTIMAL ) {    
+			    
+		    	// TODO implement
+			 			    
+		    } else {
+		    	
+		    	System.out.println ( "No optimal solution found" );
+		    	
+		    	model.computeIIS();
+		    	
+		    	GRBConstr[] constraints = model.getConstrs ( );
+		    	
+		    	for ( int i = 0; i < constraints.length; i++ ) {
+		    		
+		    		GRBConstr constraint = constraints [ i ];
+		    		
+		    		if ( constraint.get ( GRB.IntAttr.IISConstr ) > 0 ) {
+		    			System.out.println ( constraint.get ( GRB.StringAttr.ConstrName ) );
+		    		} // if
+		    		
+		    	} // for
+		    	
+		    	result.setOptimalValue ( -1 );
+		    	
+		    } // eif
+		    
+		    
+		    // clean up ---------------------------------------------------------------------------------------------------------
+		    
+		    model.dispose ( );  
+		    env.dispose ( );
+		    
+		} catch ( GRBException e ) {
+			
+			e.printStackTrace ( );
+			
+		} // catch me if you can 
+		
+		return result;
+		
+	} // optimizer
+
+}

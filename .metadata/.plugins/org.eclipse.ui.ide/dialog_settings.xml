@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Prof. R. P. Singh\Documents\Google Drive\TUEindhoven\Quartile 1\1BK50-Algo. Prog. for OM\Lectures\Lecture7\Lecture 7 Examples"/>
+		<item value="C:\Users\Prof. R. P. Singh\Documents\Google Drive\TUEindhoven\Quartile 1\1BK50-Algo. Prog. for OM\Lectures\Lecture7\animation"/>
+		<item value="C:\Users\Prof. R. P. Singh\Documents\Google Drive\TUEindhoven\Quartile 1\1BK50-Algo. Prog. for OM\Lectures\Lecture 5 examples\spreadsheetio"/>
+		<item value="C:\Users\Prof. R. P. Singh\Documents\Google Drive\TUEindhoven\Quartile 1\1BK50-Algo. Prog. for OM\Lectures\Lecture 5 examples\fileio"/>
+		<item value="C:\Users\Prof. R. P. Singh\Documents\MStuff\Quartile 1\1BK50-Algo. Prog. for OM\Projects1\Lecture1\src"/>
+		<item value="C:\Users\Prof. R. P. Singh\Documents\MStuff\Quartile 1\1BK50-Algo. Prog. for OM\Projects1\Lecture1"/>
+		<item value="C:\Users\Prof. R. P. Singh\Documents\MStuff\Quartile 1\1BK50-Algo. Prog. for OM\Projects1"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\Prof. R. P. Singh\Documents\Google Drive\TUEindhoven\Quartile 1\1BK50-Algo. Prog. for OM\Lectures\Lecture7\Lecture7.Examples.zip"/>
+			<item value="C:\Users\Prof. R. P. Singh\Documents\Google Drive\TUEindhoven\Quartile 1\1BK50-Algo. Prog. for OM\Assignments\Assignment7AttachmentForStudents.zip"/>
+		</list>
+	</section>
+	<section name="TaskPropertiesDialogSettings">
+		<item value="723" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="283" key="DIALOG_HEIGHT"/>
+		<item value="330" key="DIALOG_X_ORIGIN"/>
+		<item value="184" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

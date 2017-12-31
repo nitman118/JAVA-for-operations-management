@@ -1,0 +1,7 @@
+hello
+student
+this
+is
+the
+first
+testcase

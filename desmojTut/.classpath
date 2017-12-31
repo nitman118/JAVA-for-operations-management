@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/commons-math-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/desmoj.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/j3d-core-1.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/j3d-core-utils-1.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/jxl-2.6.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/vecmath-1.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Prof. R. P. Singh/Documents/Google Drive/TUEindhoven/Quartile 1/1BK50-Algo. Prog. for OM/Assignments/Assignment7AttachmentForStudents/terminalA/lib/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

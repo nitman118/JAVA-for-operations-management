@@ -1,0 +1,77 @@
+package Q2;
+
+public class Application {
+
+	public Application ( ) {
+	} // constructor
+	
+	public static void main ( String[] args ) {
+		Application app = new Application ( );
+		app.run ( );
+	} // main
+	
+	public void run ( ) {
+		
+		SmallBucketCLSPOptimizer optimizer = new SmallBucketCLSPOptimizer ( );
+		
+		int T = 12;
+		int nProducts = 2;
+		
+		double c = 30;
+		
+		double[] h = new double[] { 1, 1 };
+		double[] s = new double[] { 40, 40 };
+		double[] I0 = new double[] { 20, 20 };
+		
+		double[][] demand = new double[][] {
+			{ 	10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10,
+				10, 
+				10,
+				10,
+				10 },
+			{ 	10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				20, 
+				10,
+				10, 
+				10,
+				10, 
+				10,
+				10,
+				10 },
+		};
+		
+		double[] ts = new double[] { 10, 10 };
+		double[] tp = new double[] { 1, 1 };
+		
+		SmallBucketCLSPSolution solution = optimizer.optimze ( T, nProducts, c, h, s, I0, demand, ts, tp );
+		
+    	System.out.println ( solution.getOptimalValue ( ) );
+	    
+	    for ( int t = 0; t < T; t++ ) {
+	    	System.out.print ( "t=" + t + ": " );
+	    	
+	    	for ( int k = 0; k < nProducts; k++ ) {
+	    		System.out.print ( solution.getQ ( k, t ) + "\t" );	    	
+	    	}
+	    	
+	    	System.out.print ( "\n" );
+	    	
+	    } // for	
+		
+	} // run
+
+} // Application

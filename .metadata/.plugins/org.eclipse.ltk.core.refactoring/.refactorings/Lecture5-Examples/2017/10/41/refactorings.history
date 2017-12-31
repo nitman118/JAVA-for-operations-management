@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 8 elements from project &apos;Lecture5-Examples&apos;&#x0D;&#x0A;- Original project: &apos;Lecture5-Examples&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     CellStyle.java&#x0D;&#x0A;     CreateWorkBook.java&#x0D;&#x0A;     ExampleGraphs.java&#x0D;&#x0A;     Formula.java&#x0D;&#x0A;     OpenWorkBook.java&#x0D;&#x0A;     ReadSheet.java&#x0D;&#x0A;     TypesofCells.java&#x0D;&#x0A;     WriteSheet.java" description="Delete elements" element1="ReadSheet.java" element2="CreateWorkBook.java" element3="Formula.java" element4="WriteSheet.java" element5="CellStyle.java" element6="OpenWorkBook.java" element7="TypesofCells.java" element8="ExampleGraphs.java" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="8" stamp="1507480063199" subPackages="false" version="1.0"/>
+</session>
